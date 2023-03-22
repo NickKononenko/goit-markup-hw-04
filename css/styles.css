@@ -136,6 +136,11 @@ img {
   padding-bottom: 100px;
 }
 
+.footer-container {
+  display: flex;
+  gap: 120px;
+}
+
 .footer-content {
   width: 264px;
 }
@@ -169,21 +174,51 @@ img {
   color: var(--text-color-cloud);
 }
 
+.footer-sm-par {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.footer-sm-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--seconadry-text-color);
+  border: none;
+  border-radius: 50%;
+  fill: var(--text-color-cloud);
+}
+
+.footer-sm-link:hover {
+  background-color: #31d0aa;
+}
+
 /* Main page */
 
 /* Hero */
 
 .hero-section {
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  max-width: 1440px;
   background-color: var(--primary-text-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office1.jpg);
+  text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
-  /* Доданий для того, щоб було видно hero title */
-}
-
-.container.hero {
-  /* Чому при height - висота 900 пікселів, а при max-height - висота правильна?? */
-  max-height: 600px;
-  text-align: center;
 }
 
 .hero-title {
@@ -240,8 +275,17 @@ img {
   gap: 24px;
 }
 
-.strategy {
+.values-list-item {
   width: calc((100% - 72px) / 4);
+}
+
+.values-icon-container {
+  text-align: center;
+  padding: 24px 100px;
+  background-color: var(--text-color-cloud);
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .our-values-section h3 {
@@ -298,6 +342,12 @@ img {
   gap: 24px;
 }
 
+.team-list-item {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0 0 4px 4px;
+}
+
 .our-team-section h3 {
   font-style: normal;
   font-weight: 500;
@@ -312,12 +362,73 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--seconadry-text-color);
+  margin-bottom: 8px;
 }
 
 .member-content {
   background-color: white;
   text-align: center;
   padding: 32px 16px;
+  border-radius: 0 0 4px 4px;
+}
+
+.sm-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.sm-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--text-color-iris);
+  border: none;
+  border-radius: 50%;
+  fill: var(--text-color-cloud);
+}
+
+.sm-link:hover {
+  background-color: var(--text-color-ocean);
+}
+
+/* Customers */
+
+.customers-header {
+  margin-bottom: 72px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  fill: #8e8f99;
+}
+
+.customers-link:hover {
+  border-color: var(--text-color-ocean);
+  fill: var(--text-color-ocean);
 }
 
 /* Portfolio page */
@@ -359,6 +470,8 @@ img {
   color: var(--text-color-white);
   background-color: var(--text-color-ocean);
   border-color: var(--text-color-ocean);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Portfolio items */
@@ -369,9 +482,10 @@ img {
   gap: 48px 24px;
 }
 
-/* .portfolio-card-set > .item { 
+.card-set-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-*/
 
 .card-content {
   padding-top: 32px;
