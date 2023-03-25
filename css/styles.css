@@ -10,10 +10,13 @@
 :root {
   --primary-text-color: #2e2f42;
   --seconadry-text-color: #434455;
+  --light-slate-color: #8e8f99;
   --text-color-white: #ffffff;
   --text-color-cloud: #f4f4fd;
+  --corn-flower-color: #e7e9fc;
   --text-color-iris: #4d5ae5;
   --text-color-ocean: #404bbf;
+  --success-color: #31d0aa;
 }
 
 body {
@@ -62,7 +65,7 @@ img {
 /* Header */
 
 .page-header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--corn-flower-color);
 }
 
 .container.header {
@@ -138,11 +141,11 @@ img {
 
 .footer-container {
   display: flex;
-  gap: 120px;
 }
 
 .footer-content {
   width: 264px;
+  margin-right: 120px;
 }
 
 .footer-content .logo {
@@ -197,7 +200,7 @@ img {
 }
 
 .footer-sm-link:hover {
-  background-color: #31d0aa;
+  background-color: var(--success-color);
 }
 
 /* Main page */
@@ -216,6 +219,9 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
@@ -280,8 +286,10 @@ img {
 }
 
 .values-icon-container {
-  text-align: center;
-  padding: 24px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   background-color: var(--text-color-cloud);
   border: none;
   border-radius: 4px;
@@ -368,7 +376,7 @@ img {
 .member-content {
   background-color: white;
   text-align: center;
-  padding: 32px 16px;
+  padding: 32px 0;
   border-radius: 0 0 4px 4px;
 }
 
@@ -386,7 +394,6 @@ img {
   width: 40px;
   height: 40px;
   background-color: var(--text-color-iris);
-  border: none;
   border-radius: 50%;
   fill: var(--text-color-cloud);
 }
@@ -415,15 +422,19 @@ img {
   gap: 24px;
 }
 
+.customers-list-item {
+  width: calc(100% - 120px / 5);
+}
+
 .customers-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 168px;
+  width: 100%;
   height: 88px;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--light-slate-color);
   border-radius: 4px;
-  fill: #8e8f99;
+  fill: var(--light-slate-color);
 }
 
 .customers-link:hover {
@@ -461,7 +472,7 @@ img {
   cursor: pointer;
   border: none;
   padding: 12px 24px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--corn-flower-color);
   border-radius: 4px;
 }
 
@@ -482,7 +493,11 @@ img {
   gap: 48px 24px;
 }
 
-.card-set-item:hover {
+.card-link {
+  display: block;
+}
+
+.card-link:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -491,7 +506,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--corn-flower-color);
   border-top: 0;
 }
 
